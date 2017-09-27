@@ -4,10 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
         int n = 1;
-        while (n <= 1000) {
-            if (n % 3 == 0 || n % 5 == 0)
-                System.out.printf("%d" + (n == 1000 ? "" : " , "), n);
+        int sum = 0;
+        
+        while (n < 1000) {
+            if (n % 3 == 0 || n % 5 == 0) {
+                sum += n;
+            }
             n++;
         }
+        System.out.println(sum);
     }
 }
